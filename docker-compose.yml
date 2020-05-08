@@ -1,0 +1,23 @@
+---
+version: '3'
+
+services:
+  celery:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'celery -A correlation_analysis worker --loglevel=info'
+    volumes:
+      - .:/opt/celery
+    depends_on:
+      - rabbitmq
+    environment:
+      RABBITMQ_BROKER: 'pyamqp://guest:guest@rabbitmq//'
+
+  rabbitmq:
+    image: rabbitmq:3.8.3-management-alpine
+    volumes:
+      - ./rabbitmq/rabbitmq_data:/var/lib/rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
