@@ -17,7 +17,6 @@ def check_convert_categorical(df):
 
 @app.task
 def pearson_correlation(csv_path):
-    # TODO Add another function to change to categorical
     # TODO download link for http => CSV. NOTE Awaiting download function
     df = pd.read_csv(csv_path)
     output = []
