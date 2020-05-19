@@ -3,8 +3,6 @@ import pandas as pd
 import os
 
 import scipy
-import seaborn as sns
-import matplotlib.pyplot as plt
 import re
 from nltk.corpus import stopwords
 import pandas as pd
@@ -56,6 +54,7 @@ def cosine_similarity(entry1, entry2):
          cream      WORD2
     ice  0.546036   0.641752
     """
+
     entry1 = preprocess(entry1)
     entry2 = preprocess(entry2)
     result_list = [[cosine_distance_between_two_words(word1, word2) for word2 in entry2] for word1 in entry1]

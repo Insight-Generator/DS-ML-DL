@@ -1,2 +1,4 @@
 celery
 pandas
+scipy
+nltk

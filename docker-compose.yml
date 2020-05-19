@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: 'celery -A correlation_analysis worker --loglevel=info'
+    command: 'celery -A word_embedding_cosine_similarity_analysis worker --loglevel=info'
     volumes:
       - .:/opt/celery
     depends_on:

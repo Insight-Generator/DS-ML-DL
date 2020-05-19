@@ -30,4 +30,5 @@ def pearson_correlation(csv_path):
                 if not any(corr_result in sublist for sublist in output): # Checks if corr_result already in output arr. If not, append
                     output.append([column, other_column, corr_result])
     print(output)
+    # POST request + know what function it came from?
     return output

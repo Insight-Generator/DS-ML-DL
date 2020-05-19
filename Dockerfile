@@ -9,6 +9,9 @@ ENV PYTHONUNBUFFERED 1
 COPY requirements.txt /opt/celery/
 RUN pip install -r /opt/celery/requirements.txt
 
+COPY nltk_download.py /opt/celery/
+RUN python /opt/celery/nltk_download.py
+
 RUN groupadd -r celery && useradd --no-log-init -r -g celery celery -m
 
 COPY --chown=celery:celery correlation_analysis.py /opt/celery/
