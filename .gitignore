@@ -1,6 +1,7 @@
 pretrained_embeddings/
 rabbitmq/
 *.csv
+*.xls
 
 # Created by https://www.gitignore.io/api/venv,django,python,jupyternotebooks
 # Edit at https://www.gitignore.io/?templates=venv,django,python,jupyternotebooks

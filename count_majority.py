@@ -18,7 +18,7 @@ def count_majority(csv_path):
             print(df[column[0]].value_counts())
             print("\n")
     # TODO discuss output
-    # [[column1: X], [column2: Y], [column3: Z]]
+    # [[Female: 518], [Male: 482], [Majority?: Z]]
 
     # Majority - if one category in column is taking >70%? (arbitrary %)
 
