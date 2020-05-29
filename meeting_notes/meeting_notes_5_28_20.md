@@ -40,5 +40,3 @@ graph 123, it will query `ml_proc_custom_data` for `k1`
 	GRAPH_ID: XYZ,
 	'outlier': ['columnf', 'coumnz']
 }
-
-
